@@ -1,0 +1,149 @@
+package advancejava;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+class SchoolDto{
+	private int id;
+	private String name;
+	private double english;
+	private double maths;
+	private double science;
+	private double result;
+	private double percentage;
+	private String grade;
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public double getEnglish() {
+		return english;
+	}
+	public void setEnglish(double english) {
+		this.english = english;
+	}
+	public double getMaths() {
+		return maths;
+	}
+	public void setMaths(double maths) {
+		this.maths = maths;
+	}
+	public double getScience() {
+		return science;
+	}
+	public void setScience(double science) {
+		this.science = science;
+	}
+	public double getResult() {
+		return result;
+	}
+	public void setResult(double result) {
+		this.result = result;
+	}
+	public double getPercentage() {
+		return percentage;
+	}
+	public void setPercentage(double percentage) {
+		this.percentage = percentage;
+	}
+	public String getGrade() {
+		return grade;
+	}
+	public void setGrade(String grade) {
+		this.grade = grade;
+	}
+	@Override
+	public String toString() {
+		return "SchoolDto [id=" + id + ", name=" + name + ", english=" + english + ", maths=" + maths + ", science="
+				+ science + ", result=" + result + ", percentage=" + percentage + ", grade=" + grade + "]";
+	}
+	
+}
+
+public class SchoolController {
+
+	public static void main(String[] args) throws ClassNotFoundException, SQLException {
+		SchoolDto dto=new SchoolDto();
+		dto.setId(3);
+		dto.setName("wasty");
+		dto.setEnglish(36);
+		dto.setMaths(48);
+		dto.setScience(68);
+		
+		SchoolService(dto);
+		
+		
+		
+
+	}
+	public static void SchoolService(SchoolDto dto) throws ClassNotFoundException, SQLException {
+		result(dto);
+		percentage(dto);
+		grade(dto);
+		System.out.println("entered into service layer");
+		System.out.println("sending into dao layer");
+		SchoolDao(dto);
+	}
+	public static void SchoolDao(SchoolDto dto) throws ClassNotFoundException, SQLException {
+		System.out.println("entered into dao");
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		Connection connection=DriverManager.getConnection("jdbc:mysql://localhost:3306/talentschool", "root", "Srisowmya@12");
+		PreparedStatement p=connection.prepareStatement("insert into memocard values(?,?,?,?,?,?,?,?)");
+		p.setInt(1, dto.getId());//
+		p.setString(2, dto.getName());
+		p.setDouble(3, dto.getEnglish());
+		p.setDouble(4, dto.getMaths());
+		p.setDouble(5, dto.getScience());
+		p.setDouble(6, dto.getResult());
+		p.setDouble(7, dto.getPercentage());
+		p.setString(8, dto.getGrade());
+		
+		p.executeUpdate();
+		
+
+		System.out.println("dao received data from dto successfully");
+		System.out.println(dto);
+		
+	}
+	public static double result(SchoolDto dto){
+		return dto.getEnglish()+dto.getMaths()+dto.getScience();
+	}
+	public static double percentage(SchoolDto dto) {
+		return (result(dto)/300.0)*100;
+	}
+	public static String grade(SchoolDto dto) {
+		double percentage=percentage(dto);
+		if(percentage>=35) {
+			if(percentage>90) {
+				return "A+";
+				
+			}
+			else if(percentage>75 &&percentage<=90) {
+				return "A";
+			}
+			else if(percentage>60 &&percentage<=75) {
+				return "B";
+			}
+			else if(percentage>50 &&percentage<=60) {
+				return "C";
+			}
+			else if(percentage>35 &&percentage<=50) {
+				return "D";
+			}
+			
+		}
+		return "FAIL";
+			
+	}
+
+}

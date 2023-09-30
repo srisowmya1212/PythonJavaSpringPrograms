@@ -1,0 +1,11 @@
+127.0.0.1 - - [01/Apr/2023:17:49:37 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [01/Apr/2023:17:49:52 +0530] "GET /servlet-jsp-crud/save.jsp HTTP/1.1" 200 424
+0:0:0:0:0:0:0:1 - - [01/Apr/2023:17:49:53 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [01/Apr/2023:17:50:22 +0530] "GET /servlet-jsp-crud/save?id=1&bname=jspiders&website=www.jsp.com&email=jspiders%40gmail.com&password=jsp1 HTTP/1.1" 405 751
+127.0.0.1 - - [01/Apr/2023:17:50:59 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [01/Apr/2023:17:51:00 +0530] "GET /servlet-jsp-crud/save.jsp HTTP/1.1" 200 424
+0:0:0:0:0:0:0:1 - - [01/Apr/2023:17:51:00 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [01/Apr/2023:17:51:30 +0530] "GET /servlet-jsp-crud/save?id=1&bname=jspiders&website=www.jsp.com&email=jspiders%40gmail.com&password=jsp1 HTTP/1.1" 200 12
+0:0:0:0:0:0:0:1 - - [01/Apr/2023:17:59:21 +0530] "GET /servlet-jsp-crud/save.jsp HTTP/1.1" 200 424
+0:0:0:0:0:0:0:1 - - [01/Apr/2023:18:00:38 +0530] "GET /servlet-jsp-crud/save?id=2&bname=Qspisers&website=www.qspiders.com&email=qspiders%40gmail.com&password=qspiders12 HTTP/1.1" 200 12
+0:0:0:0:0:0:0:1 - - [01/Apr/2023:18:01:02 +0530] "GET /servlet-jsp-crud/save?id=3&bname=jQspisers&website=www.qjspiders.com&email=qjspiders%40gmail.com&password=jspi1234 HTTP/1.1" 200 12

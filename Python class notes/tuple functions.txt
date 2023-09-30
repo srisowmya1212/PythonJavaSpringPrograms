@@ -1,0 +1,110 @@
+1) enumerate()
+      Fruits=('Mango','Apple','Banana','Orange')
+      for item in enumerate(Fruits):
+            print(item)
+
+(0, 'Mango')
+(1, 'Apple')
+(2, 'Banana')
+(3, 'Orange')
+
+2)all()
+
+ s=(1,2,3,4)
+print(all(s)) 
+s=(False,10)
+print(all(s))
+s=()
+print(all(s))
+
+True
+False
+True
+
+3)any()
+
+s=(1,2,3,4)
+print(any(s))
+s=(False,10)
+print(any(s))
+s=()
+print(any(s))
+
+True
+True
+False
+
+4)len()
+
+s="MANGO"
+print(len(s))
+
+5
+
+s=range(1,10)
+print(len(s))
+
+9
+
+5)max()
+
+s=('a','b','c','d')
+print(max(s))
+s=('aaaa','bb','c','F')
+print(max(s))
+s=('A','B','Z')
+print(max(s))
+s=(23,45,89,100)
+print(max(s))
+
+d
+c
+Z
+100
+
+6)min()
+
+s=('a','b','c','d')
+print(min(s))
+s=('aaaa','bb','c','F')
+print(min(s))
+s=('A','B','Z')
+print(min(s))
+s=(23,45,89,100)
+print(min(s))
+
+a
+F
+A 
+23
+
+7)sorted()
+
+s=('a','b','g','d')
+print(sorted(s, reverse=True))
+s=('aaaa','bb','c','F')
+print(sorted(s))
+s=('PYTHON')
+print(sorted(s))
+s=(23,16,89,10)
+print(sorted(s))
+
+['g', 'd', 'b', 'a']
+['F', 'aaaa', 'bb', 'c']
+['H', 'N', 'O', 'P', 'T', 'Y']
+[10, 16, 23, 89]
+
+8)sum()
+
+s=(23,16,89,10)
+print(sum(s))
+
+138
+
+9)tuple()
+
+s=tuple([23,16,89,10])
+print(s)
+
+(23, 16, 89, 10)
+

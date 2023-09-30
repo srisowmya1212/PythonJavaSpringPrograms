@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FEEDBACK FORM</title>
+</head>
+<body>
+    <h1><b>MY FEEDBACK FORM</b></h1>
+
+   <ul>
+     <li><label for="NAME">NAME  </label> <input type="text" name="NAME" id="NAME"></li>
+     <br>
+    <li><label for="EMAIL">EMAIL  </label><input type="email" name="EMAIL" id="EMAIL"></li>
+    <br>
+    <li><label for="PASSWORD">PASSWORD </label><input type="password" name="PASSWORD" id="PASSWORD"></li>
+    <br>
+    <li><label for="condition">PLEASE CHECK ALL THE EMOTIONS APPLY TO YOU</label></li>
+        <ul style="list-style-type: disc;;">
+            <li>Angry <input type="checkbox" name="condition" id="condition"></li>
+            <li>Sad <input type="checkbox" name="condition" id="condition"></li>
+            <li>Happy <input type="checkbox" name="condition" id="condition"></li>
+            <li>Ambivalent <input type="checkbox" name="condition" id="condition"></li>
+        </ul>
+
+    </ul>
+    <br>
+    <ul>
+        <li><label for="condition2">How satisfied were you with our service?</label></li>
+        <ul>
+            <li>Very Satisfied <input type="radio" name="condition2" id="condition2"></li>
+            <li>Satisfied <input type="radio" name="condition2" id="condition2"></li>
+            <li>Didnt care <input type="radio" name="condition2" id="condition2"></li>
+            <li>Dissatisfied <input type="radio" name="condition2" id="condition2"></li>
+            <li>Very Dissatisfied <input type="radio" name="condition2" id="condition2"></li>
+        </ul>
+    </ul>
+
+    <ul>
+        <li><label for="condition3"> Further Comments <textarea></textarea> </label></li>  
+
+       
+        
+    </ul>
+    <br>
+    <ul>
+        <li><label for="BioPhoto">BioPhoto    <input type="file" name="BioPhoto" id="BioPhoto"></label></li>
+        
+
+        <li><label for="location">Location Visited</label><select id="location"></li>
+            
+        <option>
+            
+            <option>Hyderabad</option>
+            <option>Warangal</option>
+            <option>Kurnool</option>
+            <option>Khammam</option>
+            <option>Nizamabad</option>
+            <option>Adilabad</option>
+
+        </option>
+        </select>
+        <li>
+            <button style="height: 25px; width: 75px; border-radius: 12px; font-size: small;">SUBMIT</button>
+        </li>
+        
+        
+    </ul>
+   
+
+</body>
+</html>

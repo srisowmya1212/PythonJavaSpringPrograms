@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+  </head>
+  <body>
+    <center>
+      <fieldset style="border: 3px solid black; width: 70%">
+        <legend style="font-size: 30px; text-align: center; color: darkblue;">
+          <b>COURSE FORM</b>
+        </legend>
+        <br />
+        <form
+          style="background-color: antiquewhite"
+          action="https://www.google.com/"
+          method="post"
+        >
+          <label for="firstname" title="firstname" style="color: red"
+            >*FIRST NAME :</label
+          >
+          <input type="text" id="firstname" title="please enter ur firstname" placeholder="ENTER YOUR FIRST NAME" style="width: 20%;" required/>
+          <!-- we should take id to give specification for that box. if we take name attribute its not working -->
+          <label for="lastname" title="lastname" style="color: red"
+            >*LAST NAME :</label
+          >
+          <input type="text" id="lastname" title="please enter ur lastname" placeholder="ENTER YOUR LAST NAME" style="width: 20%;" required />
+          <br /><br />
+          <label for="dob" style="color: red" >DOB:</label>
+          <input type="date" id="dob" />
+          <label for="age" style="color: red">AGE:</label>
+          <input type="number" id="age" style="width: 40px" title="age should be min 18 and max 35" min="18" max="35"/>
+          <br /><br />
+          <label for="email" style="color: red">*EMAIL:</label>
+          <input type="email" id="email" placeholder="ENTER UR EMAIL ADDRESS" size="23" required /><br /><br />
+          <!-- here size is used to decrease the font size -->
+          <label for="password" style="color: red">PASSWORD: </label>
+          <input type="password" id="password" title="Minimum length of 8 characters are neccessary"  minlength="8" maxlength="12"/><br /><br />
+          <!-- minlength and maxlength are used to restrict the no of characters where as min and max are used to restrict the numbers range-->
+          <label for="gender" style="color: red">GENDER:</label>
+          <label for="gender" style="color: blue">MALE</label
+          ><input type="radio" id="gender" name="gen" />
+          <label for="gender" style="color: blue">FEMALE</label
+          ><input type="radio" id="gender" name="gen" />
+          <label for="gender" style="color: blue">OTHERS</label>
+          <input type="radio" id="gender" name="gen" />
+          <!-- to select only one option we use name attribute -->
+          <br /><br />
+          <label for="skills" style="color: red">SKILLS U KNOW:</label>
+          <label for="skills" style="color: blue">SQL</label
+          ><input type="checkbox" id="skills" />
+          <label for="skills" style="color: blue">HTML</label
+          ><input type="checkbox" id="skills" />
+          <label for="skills" style="color: blue">CSS</label
+          ><input type="checkbox" id="skills" />
+          <label for="skills" style="color: blue">JS</label
+          ><input type="checkbox" id="skills" />
+          <label for="skills" style="color: blue">CORE JAVA</label
+          ><input type="checkbox" id="skills" />
+          <label for="skills" style="color: blue">ADVANCE JAVA</label
+          ><input type="checkbox" id="skills" /> <br /><br />
+          <label for="cd" style="color: red">COURSE DURATION:</label>
+          <label for="cd" style="color: blue">JOINING DATE</label
+          ><input type="month" id="cd" />
+          <label for="cd" style="color: blue">COMPLETION DATE</label
+          ><input type="month" id="cd" /> <br /><br />
+          <label for="ct" style="color: red">CLASS TIMINGS:</label>
+          <input type="time" id="ct" />
+          <br /><br />
+          <label for="resume" style="color: red">UPLOAD YOUR RESUME:</label>
+          <input type="file" id="resume" />
+          <br /><br />
+          <label for="dropdown" style="color: red">SELECT UR BRANCH:</label>
+          <select id="dropdown" style="width: 150px;">
+            <option selected hidden>Select the branch</option> 
+            <!-- it will hidden the option select the branch in the dropdown -->
+            <!-- selected will make the option selected by default <option selected>Punjagutta</option> -->
+            <!-- disabled will make the option disabled  -->
+            <optgroup label="Hyderabad">
+            <option>Punjagutta</option>
+            <option>Dilsuknagar</option>
+            <option>Chaitanyapuri</option>
+            <option>JNTU</option>
+            <option>Kukatpally</option>
+        </optgroup>
+            <option>Bengaluru</option>
+            <option disabled>Chennai</option>
+            <option>Kolkata</option>
+          </select>
+          <br /><br />
+          <input type="submit" />
+          <!-- submit is already predefined and has functionality is already defined -->
+          <input type="reset" />
+          <br /><br />
+          <input type="button" value="exit" style="color: brown" />
+          <!-- button doesnt have functionality and it is predefined by using js -->
+        </form>
+      </fieldset>
+    </center>
+  </body>
+</html>

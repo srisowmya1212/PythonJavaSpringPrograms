@@ -1,0 +1,36 @@
+div{
+    color:blueviolet
+}
+/* decendent selector--->irrespective of it the a tag gets colored red */
+div a{
+    color: red;
+}
+/* child selector--> immediate child gets colored */
+div > a {
+    color:yellow;
+}
+/* general sibling ---> after div tag what are the elements specified with a are colored */
+div ~ p{
+    color: coral;
+}
+p ~ div {
+  color: black;
+}
+div.demo ~ h1{
+    color: darkgreen;
+}
+div.demo1 ~ p{
+    color: aqua;
+}
+div > p{
+    color: chartreuse;
+}
+/* adjacent sibling ---> in which after element closing tag , the tag that starts*/
+/* div + p{          this will work only when u specify div.demo1 +p  and as it is line to line execution 
+    color: chocolate;
+} */
+
+div.demo2 + p+p{
+    color: chocolate;
+}
+/* as u add another p it moves to another p and color it as chocalate */

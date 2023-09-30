@@ -1,0 +1,123 @@
+package programmingclass;
+
+import java.util.Scanner;
+
+public class Array_Operations {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the size of an array: ");
+		int size = sc.nextInt();
+		int array[] = new int[size];
+		for (int i = 0; i < size; i++) {
+			array[i] = sc.nextInt();
+		}
+		System.out.println("The elements of an array is:");
+		System.out.print("[");
+		for (int b : array) {
+			System.out.print(b + " ");
+		}
+		System.out.println("]");
+
+		System.out.println(" 1. Display 2.Insertion");
+		System.out.println("Enter the choice:");
+		int choice = sc.nextInt();
+		
+		
+			switch (choice) {
+			case 1: {
+				display(array);
+			
+
+			}
+			case 2: {
+				System.out.println("Enter the element for insertion:");
+				int element = sc.nextInt();
+				System.out.println("Enter the position for insertion: ");
+				int position = sc.nextInt();
+
+				array=insertion(array, size, element, position);
+				System.out.println("The array elements after insertion: ");
+				System.out.print("[");
+				for (int a : result) {
+					System.out.print(a + " ");
+				}
+				System.out.println("]");
+
+			
+
+			}
+			case 3:
+				System.out.println("Enter the element for  deletion:");
+				int delele=sc.nextInt();
+				array=deletion(array, size, delele);
+				for(int a:array) {
+					System.out.println(a+" ");
+				}
+			default:
+				System.out.println("Enter the correct choice");
+
+			}
+		}
+
+	
+
+	public static void display(int array[]) {
+		int a[] = new int[array.length];
+		for (int i = 0, j = 0; i < array.length; i++) {
+			a[j++] = array[i];
+		}
+		System.out.println("The elements of an array is:");
+		System.out.print("[");
+		for (int b : a) {
+			System.out.print(b + " ");
+		}
+		System.out.println("]");
+
+	}
+
+	// public static int[] insertion(int[] array,int size,int element,int position)
+
+	public static int[] insertion(int[] array, int size, int element, int position) {
+		int result[] = new int[size + 1];
+		if (position > size + 1 || position <= 0) {
+			System.out.println("Insertion is not possible");
+		} else {
+
+			for (int i = 0, j = 0; i < result.length; i++) {
+				if (i == (position - 1)) {
+					result[i] = element;
+				} else {
+					result[i] = array[j++];
+				}
+			}
+			
+		}
+		return result;
+	}
+	public static int[] deletion(int [] array,int size,int delele) {
+		int result[]=new int[size-1];
+		int index=search(array,delele);
+		if(index==-1) {
+			System.out.println("Deletion not possible");
+		}
+		else {
+			
+			for(int i=0,j=0;i<size;i++) {
+				if(index!=i) {
+					result[j++]=array[i];
+					
+				}
+			}
+		}
+		return result;
+	}
+	public static int search(int[] array,int delele) {
+		for(int i=0;i<array.length;i++) {
+			if(array[i]==delele) {
+				return i;
+			}
+		}
+		return -1;
+	}
+}

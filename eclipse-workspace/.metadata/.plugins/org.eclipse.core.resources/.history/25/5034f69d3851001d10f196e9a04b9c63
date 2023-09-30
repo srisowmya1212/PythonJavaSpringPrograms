@@ -1,0 +1,10 @@
+package advancejava;
+
+public class CandidateController {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

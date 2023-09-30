@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;com.skss.hibernate_empprj.AndraStudentController.java&apos; to &apos;AndraStudentDaoImpl.java&apos;&#x0D;&#x0A;- Original project: &apos;hibernate-empprj&apos;&#x0D;&#x0A;- Original element: &apos;com.skss.hibernate_empprj.AndraStudentController.java&apos;&#x0D;&#x0A;- Renamed element: &apos;com.skss.hibernate_empprj.AndraStudentDaoImpl.java&apos;" description="Rename compilation unit &apos;AndraStudentController.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.skss.hibernate_empprj{AndraStudentController.java" name="AndraStudentDaoImpl.java" references="false" stamp="1667480721610" version="1.0"/>
+</session>

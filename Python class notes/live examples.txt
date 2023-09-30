@@ -1,0 +1,203 @@
+No separator:
+1)
+
+a, b = input('Enter two integer numbers: ').split()
+print("a = ",a, ",b = ",b)
+
+Enter two integer numbers: 3 5
+a =  3 ,b =  5
+
+2)
+
+name, age, perc = input("Enter student's details: ").split()
+print("Name: ", name)
+print("Age: ", age)
+print("Percentage: ", perc)
+
+Enter student's details: Sri 13 34
+Name:  Sri
+Age:  13
+Percentage:  34
+
+With Separator:
+
+1)
+
+a, b = input('Enter two integer numbers: ').split(',')
+print("a = ",a, ",b = ",b)
+
+Enter two integer numbers: 4,5
+a =  4 ,b =  5
+
+2)
+
+name, age, perc = input("Enter student's details: ").split(',')
+print("Name: ", name)
+print("Age: ", age)
+print("Percentage: ", perc)
+
+Enter student's details: Sri,13,87
+Name:  Sri
+Age:  13
+Percentage:  87
+
+Examples:
+
+Example:
+
+a,b=[int(x) for x in input("Enter Two Numbers :").split()]
+print("Product is :", a*b)
+print("Diff is :", a-b)
+print("Div is :", a/b)
+print("Fdiv is :", a//b)
+
+Enter Two Numbers :4 5
+Product is : 20
+Diff is : -1
+Div is : 0.8
+Fdiv is : 0
+
+Example:
+
+p,q,r= [float(x) for x in input("Enter Three Float Numbers:").split(',')]
+print("The Sum is :", p+q+r)
+
+Enter Three Float Numbers:1.4,3.4,1.5
+The Sum is : 6.3
+
+Example:Reverse
+
+PyStr=input("Enter Any String: ")
+print(PyStr[::-1])
+
+Enter Any String: PYTHON
+NOHTYP
+
+PyStr=input("Enter Any String: ") 
+print(''.join(reversed(PyStr)))
+
+Enter Any String: PYTHON
+NOHTYP
+
+PyStr=input("Enter Any String: ") 
+i=len(PyStr)-1
+n='' 
+while i>=0:
+ n=n+PyStr[i] 
+ i=i-1
+print(n)
+
+Enter Any String: PYTHON
+NOHTYP
+
+eval() examples:
+
+x = eval("10+20+30")
+print(x)
+
+60
+
+Example: Display the reverse the string
+
+PyStr=input("Enter Any String:")
+i=len(PyStr)-1
+j=''
+while i>=0:
+ j=j+PyStr[i]
+ i=i-1
+ print(j)
+
+Enter Any String:PYTHON
+N
+NO
+NOH
+NOHT
+NOHTY
+NOHTYP
+
+Example:Reserwords string.
+
+PyStr=input("Enter Any String:")
+l=PyStr.split()
+PyList=[]
+i=len(l)-1
+while i>=0:
+ PyList.append(l[i])
+ i=i-1
+ j=' '.join(PyList)
+print(j)
+
+Enter Any String:PYTHON
+PYTHON
+
+Example:Reverese Internal Content of each word
+
+PyStr=input("Enter Any String:")
+PyList=PyStr.split()
+PyList1=[]
+i=0
+while i<len(PyList):
+ PyList1.append(PyList[i][::-1])
+ i=i+1
+j=' '.join(PyList1)
+print(j)
+
+Enter Any String:PYTHON
+NOHTYP
+
+Example:
+
+PyStr=input("Enter Any String:")
+j=''
+for x in PyStr:
+ if x.isalpha():
+ j=j+x
+ i=x
+ else:
+ j=j+i*(int(x)-1)
+print(j)
+
+Enter Any String:PYTHON
+PYTHON
+
+Example:Removing duplicate Characters
+
+PyStr=input("Enter Any String:")
+PyList=[]
+for x in PyStr:
+ if x not in PyList:
+   PyList.append(x)
+   y=''.join(PyList)
+print(y)
+
+Enter Any String:PYYTTHHOONN
+PYTHON
+
+Example:Prime or not
+
+PyNum=int(input("Enter Any Number: ")) 
+if PyNum > 1: 
+ for i in range(2,PyNum): 
+ if (PyNum % i) == 0: 
+ print(PyNum,"Not Prime Number") 
+ break 
+ else: 
+ print(PyNum,"Prime Number") 
+
+Enter Any Number: 56
+56 Not Prime Number
+
+Example:length of string without len()
+
+PyStr = input("Enter a string: ")
+counter=0
+for Str in PyStr:
+ counter = counter+1
+print("Length of the input string is:", counter)
+
+Enter a string: PYTHON
+Length of the input string is: 6
+
+
+
+

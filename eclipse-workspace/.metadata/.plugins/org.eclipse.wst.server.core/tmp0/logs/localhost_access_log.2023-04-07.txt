@@ -1,0 +1,6 @@
+127.0.0.1 - - [07/Apr/2023:15:51:44 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [07/Apr/2023:15:51:47 +0530] "GET /servlet-jsp-crud/displaybranch.jsp HTTP/1.1" 500 2446
+0:0:0:0:0:0:0:1 - - [07/Apr/2023:15:51:47 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [07/Apr/2023:15:52:11 +0530] "GET /servlet-jsp-crud/branchhome.jsp HTTP/1.1" 200 201
+0:0:0:0:0:0:0:1 - - [07/Apr/2023:15:52:11 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [07/Apr/2023:15:52:58 +0530] "GET /servlet-jsp-crud/display HTTP/1.1" 200 1567

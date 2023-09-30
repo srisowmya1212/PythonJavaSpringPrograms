@@ -1,0 +1,26 @@
+body{
+    color:brown;
+}
+h1{
+    float: left;
+    font-size: 200px;
+}
+div{
+    left:300px;
+    top: 70px;
+    position: relative;
+  
+   
+}
+#blue{
+    color: blue;
+}
+#yel{
+    color: rgb(224, 214, 24);
+}
+.red{
+    color: red;
+}
+#green{
+    color:green
+}

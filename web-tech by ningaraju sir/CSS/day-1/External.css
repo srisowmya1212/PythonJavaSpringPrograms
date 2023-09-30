@@ -1,0 +1,11 @@
+#demo{
+    text-align: center;
+    text-transform: lowercase;
+    text-shadow: 10px 10px 5px red;
+    text-decoration: dotted;
+    font-weight: bolder;
+    font-style: italic;
+    font-variant: small-caps;
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

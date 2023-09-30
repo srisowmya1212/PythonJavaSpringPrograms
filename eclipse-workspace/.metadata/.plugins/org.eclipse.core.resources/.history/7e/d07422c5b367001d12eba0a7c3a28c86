@@ -1,0 +1,26 @@
+package com.dispatch;
+
+@WebServlet("/scan")
+import java.io.IOException;
+
+import javax.servlet.GenericServlet;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletRe
+import javax.servlet.annotation.WebServlet;sponse;
+
+
+
+public class GeneralStore extends GenericServlet {
+
+	@Override
+	public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {
+		String item=req.getParameter("item");
+		RequestDispatcher dispatcher=req.getRequestDispatcher("billing");
+		dispatcher.forward(req, res);
+		
+	}
+
+
+}

@@ -1,0 +1,26 @@
+.container{
+    display: flex;
+}
+
+.container div{
+   border: 1px solid rgb(1, 1, 1);
+   padding: 10px;
+}
+.box-1{
+    flex: 2; 
+    order: 3;
+
+}
+.box-2{
+    flex: 1;
+    order: 1;
+}
+.box-3{
+    flex:1;
+    order:2;
+}
+/* flex:it just extends the width of the box 
+   order:it tells the order of the box
+       
+    */
+

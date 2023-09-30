@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+    <fieldset>
+        <legend>Register</legend>
+        <form action="" autocomplete="on">
+        <table >
+            <tr>
+                <td>Name:</td>
+                <td><input type="text" placeholder="enter your name" autofocus></td>
+            </tr>
+            <tr>
+                <td>Last_Name:</td>
+                <td><input type="text" minlength="8" maxlength="8"></td>
+            </tr>
+            <tr>
+                <td>Phone:</td>
+                <td><input type="tel" value="123456789" readonly></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" required pattern="[A-Z]{4}[a-z]{4}[1-9]{4}" title="[A-Z]{4}[a-z]{4}[1-9]{4}"></td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td><textarea   cols="30" rows="10" ></textarea></td>
+            </tr>
+            <tr>
+                <td >gender</td>
+                <td>
+                    <input type="radio" name="a">
+                </td>
+            </tr>
+            <tr>
+                <td><label for="course1">course1</label></td>
+                <td>
+                    <input list="course1">
+                    <datalist id="course1">
+                        <option value="mtech">mtech</option>
+                        <option value="btech">btech</option>
+                        <option value="mab" disabled>mba</option>
+                        <option value="bba">bba</option>
+                        <option value="mca">mca</option>
+                    </datalist>
+                </td>
+            </tr>
+            <tr>
+                <td>file</td>
+                <td><input type="file"></td>
+            </tr>
+            
+                <td>color</td>
+                <td><input type="color"></td>
+            </tr>
+            <tr>
+                <td>week</td>
+                <td><input type="week"></td>
+            </tr>
+            <tr>
+                <td>month</td>
+                <td><input type="month"></td>
+            </tr>
+            <tr>
+                <td>date/DOB</td>
+                <td><input type="date"></td>
+            </tr>
+            <tr>
+                <td>date-time-location</td>
+                <td><input type="datetime-local"></td>
+            </tr>
+            <tr>
+                <td>hidden</td>
+                <td><input type="hidden"></td>
+            </tr>
+            <tr>
+                <td>image</td>
+                <td><input type="image" src="../Rough Practice/Images/tree-736885_1280.jpg" width="300" height="340"></td>
+            </tr>
+            <tr>
+                <td>range</td>
+                <td><input type="range"></td>
+            </tr>
+            <tr>
+                <!-- <td>submit</td> -->
+                <td><input type="submit"></td>
+                <td><button>submit</button></td>
+            </tr>
+            <tr>
+                <!-- <td>submit</td> -->
+                <td><input type="reset"></td>
+                <td><button>reset</button></td>
+            </tr>
+        </table>
+    </form>
+    </fieldset>
+    <br>
+    <iframe src="../Rough Practice/Images/tree-736885_1280.jpg" frameborder="100" height="200px" width="200px"></iframe>
+    <iframe src="../Rough Practice/Videos/lion-158980.mp4" frameborder="100"></iframe>
+</center>
+</body>
+</html>

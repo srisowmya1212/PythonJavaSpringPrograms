@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;programmingclass.StringEvenConsonantWord&apos; to &apos;StringVowelConsonantWord&apos;&#x0D;&#x0A;- Original project: &apos;programs&apos;&#x0D;&#x0A;- Original element: &apos;programmingclass.StringEvenConsonantWord&apos;&#x0D;&#x0A;- Renamed element: &apos;programmingclass.StringVowelConsonantWord&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;StringEvenConsonantWord&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;programmingclass{StringEvenConsonantWord.java[StringEvenConsonantWord" matchStrategy="1" name="StringVowelConsonantWord" qualified="false" references="true" similarDeclarations="false" stamp="1676104894962" textual="false" version="1.0"/>
+</session>

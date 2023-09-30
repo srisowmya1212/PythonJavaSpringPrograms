@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.saibank.SaiBankDao&apos; to &apos;SaiBankDaoImpl&apos;&#x0D;&#x0A;- Original project: &apos;advancejava&apos;&#x0D;&#x0A;- Original element: &apos;com.saibank.SaiBankDao&apos;&#x0D;&#x0A;- Renamed element: &apos;com.saibank.SaiBankDaoImpl&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;SaiBankDao&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.saibank{SaiBankDao.java[SaiBankDao" matchStrategy="1" name="SaiBankDaoImpl" qualified="false" references="true" similarDeclarations="false" stamp="1666786101126" textual="false" version="1.0"/>
+</session>

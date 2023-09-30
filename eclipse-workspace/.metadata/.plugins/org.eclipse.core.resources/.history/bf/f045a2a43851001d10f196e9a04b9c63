@@ -1,0 +1,23 @@
+package advancejava;
+
+public class CandidateController {
+
+	public static void main(String[] args) {
+		CandidateDto dto=new CandidateDto();
+		dto.setId(1);
+		dto.setName("srisowmya");
+		dto.setAge(25);
+		CandidateService();
+		
+
+	}
+    public static void CandidateService(CandidateDto c) {
+    	System.out.println("service layer entered");
+    	CandidateDao(c);
+    }
+    public static void CandidateDao(CandidateDto c) {
+    	System.out.println("enterd intodao layer");
+    	System.out.println("the value is "+c);
+    	System.out.println("stored in the database");
+    }
+}

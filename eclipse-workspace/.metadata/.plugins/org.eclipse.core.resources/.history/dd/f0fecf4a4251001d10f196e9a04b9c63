@@ -1,0 +1,89 @@
+package advancejava;
+
+class SchoolDto{
+	private int id;
+	private String name;
+	private double english;
+	private double maths;
+	private double science;
+	private double result;
+	private double percentage;
+	private String grade;
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public double getEnglish() {
+		return english;
+	}
+	public void setEnglish(double english) {
+		this.english = english;
+	}
+	public double getMaths() {
+		return maths;
+	}
+	public void setMaths(double maths) {
+		this.maths = maths;
+	}
+	public double getScience() {
+		return science;
+	}
+	public void setScience(double science) {
+		this.science = science;
+	}
+	public double getResult() {
+		return result;
+	}
+	public void setResult(double result) {
+		this.result = result;
+	}
+	public double getPercentage() {
+		return percentage;
+	}
+	public void setPercentage(double percentage) {
+		this.percentage = percentage;
+	}
+	public String getGrade() {
+		return grade;
+	}
+	public void setGrade(String grade) {
+		this.grade = grade;
+	}
+	@Override
+	public String toString() {
+		return "SchoolDto [id=" + id + ", name=" + name + ", english=" + english + ", maths=" + maths + ", science="
+				+ science + ", result=" + result + ", percentage=" + percentage + ", grade=" + grade + "]";
+	}
+	
+}
+
+public class SchoolController {
+
+	public static void main(String[] args) {
+		SchoolDto dto=new SchoolDto();
+		dto.setId(1);
+		dto.setName("wastefellow");
+		dto.setEnglish(36);
+		dto.setMaths(45);
+		dto.setScience(53);
+		
+		SchoolDao(dto);
+		
+		
+
+	}
+	public static void SchoolDao(SchoolDto dto) {
+		System.out.println("entered into dao");
+		System.out.println(dto);
+		
+	}
+
+}

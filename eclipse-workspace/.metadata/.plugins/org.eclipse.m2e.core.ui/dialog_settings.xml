@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="C:\Users\Arunsai\eclipse-workspace\spring-mvc-first\src\main\java\com\jsp\demo\Student.java"/>
+			<item value="C:\Users\Arunsai\eclipse-workspace\spring-mvc-crud1"/>
+			<item value="C:\Users\Arunsai\eclipse-workspace\hibernate-empprj\src\main\java\com\skss\hibernate_empprj\AndraStudentDto.java"/>
+			<item value="C:\Users\Arunsai\eclipse-workspace\servlet-crud1\src\main\java\com\sri\web\VegetableDto1.java"/>
+			<item value="C:\Users\Arunsai\eclipse-workspace\hibernate-demoprj\src\main\java"/>
+			<item value="C:\Users\Arunsai\eclipse-workspace\advancejava\src\advancejava"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item key="catalog" value="All Catalogs"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+			<item value="com.jsp.servlet_jsp_crud"/>
+			<item value="com.jsp.servlet_first"/>
+			<item value="com.jsp.springdemo"/>
+			<item value="com.jsp.spring_mvc_second"/>
+			<item value="com.jsp.spring_mvc_crud1"/>
+			<item value="com.jsp.spring_mvc_crud"/>
+		</list>
+		<list key="groupId">
+			<item value="com.jsp"/>
+		</list>
+		<list key="artifactId">
+			<item value="servlet-jsp-crud"/>
+			<item value="servlet-first"/>
+			<item value="springdemo"/>
+			<item value="spring-mvc-second"/>
+			<item value="spring-mvc-crud1"/>
+			<item value="spring-mvc-crud"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.ui.internal.wizards.CustomArchetypeDialog">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="MavenModuleWizardParentPage">
+		<list key="moduleName">
+			<item value="hibernate"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\Users\Arunsai\eclipse-workspace\spring-boot-crud"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+</section>

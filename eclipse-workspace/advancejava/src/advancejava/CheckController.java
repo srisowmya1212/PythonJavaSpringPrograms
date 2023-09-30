@@ -1,0 +1,48 @@
+package advancejava;
+class MonkeyDto{
+	private int id;
+	private String Name;
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return Name;
+	}
+	public void setName(String name) {
+		Name = name;
+	}
+	@Override
+	public String toString() {
+		return "MonkeyDto [id=" + id + ", Name=" + Name + "]";
+	}
+	
+	
+}
+
+public class CheckController {
+
+	public static void main(String[] args) {
+		MonkeyDto dto=new MonkeyDto();
+		dto.setId(1);
+		dto.setName("random monkey");
+		service(dto);
+
+
+	}
+	public static void service(MonkeyDto m)
+	{
+		System.out.println("enterd into service layer");
+		System.out.println("accessing data");
+	    dao(m);// or CheckController.dao as it is static not needed .here m reference is passed to dao e
+	}
+	public static void dao(MonkeyDto e) {
+		System.out.println("enterd into dao layer");
+		System.out.println("the data is:"+ e);
+		
+		System.out.println("data stored in database");
+	}
+
+}
