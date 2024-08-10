@@ -25,7 +25,7 @@ public class LCM {
 	public static int gcd(int[] obj) {
 		int gcd = obj[0];
 		for (int i = 1; i < obj.length; i++) {
-			gcd = lcmgcd(gcd, obj[i]);
+			gcd = lcmgcd(gcd, obj[i]);  // gcd = lcmgcd(obj[i],obj[i+1]);
 		}
 		return gcd;
 	}
