@@ -1,3 +1,6 @@
+refer this program gcd in LCM.java class 
+
+
 package sri;
 
 import java.util.Scanner;
