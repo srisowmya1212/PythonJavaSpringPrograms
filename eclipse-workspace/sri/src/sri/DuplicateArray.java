@@ -45,6 +45,7 @@ public class DuplicateArray {
 				temp[j++] = obj[i];
 			}
 		}
+		//below condition is for for example there are size of 4 so index position if (obj[i] != obj[i + 1]) check o and 1 and then not equal it will update 0 index number and then check 1 and 2 same no update and check 2 and 3 not same it will update 2 and last is noyt updating so will update using temp[j++]=obj[size-1] i.e; last element totemp variable and it will update . here we are doing j++ so it will update index how many we inseert  we are not giving directly size.before doing better so sort
 		temp[j++] = obj[size - 1];//if we remove this line the duplicate is removed permentaley in the array
 		// changing the original array
 		for (int i = 0; i < j; i++) {
