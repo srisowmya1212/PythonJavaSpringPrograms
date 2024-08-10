@@ -67,3 +67,63 @@ public class Prime {
 		}
 
 	}
+
+
+
+
+// to remove duplicates 
+package com.sri.practice;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Practice {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the size of array");
+		int size=sc.nextInt();
+		System.out.println("Enter the array of elements");
+		int[] obj=new int[size];
+		for(int i=0;i<size;i++) {
+			obj[i]=sc.nextInt();
+		}
+		for(int a:obj) {
+			System.out.print(a+" ");
+		}
+		int[] occ=new int[size];
+		int resArraysize=0;
+		for(int i=0;i<size;i++) {
+			if(checkDuplicateArray(obj,occ,i)) {
+				resArraysize++;
+			}
+		}
+		int res[]=new int[resArraysize];
+		int j=0;
+		for(int i=0;i<res.length;i++) {
+			if(checkDuplicateArray(obj, occ, i)) {
+				res[j]=obj[i];
+				j++;
+			}
+		}
+		System.out.println("resulting array");
+		for(int b:res) {
+			System.out.print(b+" ");
+		}
+		
+	}
+	
+	public static boolean checkDuplicateArray(int[] obj,int occ[], int index) {
+		int count=0;
+		for(int j=index+1;j<obj.length;j++) {
+			if(obj[index]==obj[j]) {
+				count++;
+				occ[j]=1;
+			}
+		}
+		if(occ[index]!=1) {
+			return true;
+		}
+		return false;
+	}
+}
