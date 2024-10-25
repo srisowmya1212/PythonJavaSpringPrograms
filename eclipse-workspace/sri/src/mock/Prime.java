@@ -1,3 +1,6 @@
+int[] a=new int[]{1,2,3};
+int[] b =new int[]{4,5,6};
+
 package mock;
 
 import java.util.Scanner;
