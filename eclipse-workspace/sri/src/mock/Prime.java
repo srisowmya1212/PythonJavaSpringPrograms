@@ -1,6 +1,54 @@
 int[] a=new int[]{1,2,3};
 int[] b =new int[]{4,5,6};
 
+//To remove duplicates
+
+
+import java.util.*;
+
+class Codechef {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int size = sc.nextInt();
+        int[] obj = new int[size];
+        for (int i = 0; i < size; i++) {
+            obj[i] = sc.nextInt();
+        }
+
+        // Use a set to track seen numbers
+        Set<Integer> seen = new HashSet<>();
+        List<Integer> res = new ArrayList<>();
+
+        for (int i = 0; i < size; i++) {
+            if (!seen.contains(obj[i])) {
+                seen.add(obj[i]);
+                res.add(obj[i]);
+            }
+        }
+
+        // Print the result
+        for (int num : res) {
+            System.out.println(num);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 package mock;
 
 import java.util.Scanner;
