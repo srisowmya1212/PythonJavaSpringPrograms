@@ -33,7 +33,7 @@ class Codechef {
         }
     }
 }
-
+//use either seen or res n need of creating res as we are using set
 
 
 
