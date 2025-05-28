@@ -1,0 +1,181 @@
+Using Collections and methods learning
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		List l1=new ArrayList<>();
+// 		l1.addAll(1,2,3,4,5); //wrong wont accept it expects collection and index
+        l1.addAll(Arrays.asList(1,2,3,4,5,5,4,3));
+		System.out.println(l1);
+		Set s1=new HashSet<>();
+		s1.addAll(l1);
+		System.out.println(s1); //removed duplicates
+
+	}
+}
+//Sorting using set
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		List l1=new ArrayList<>();
+// 		l1.addAll(1,2,3,4,5); //wrong wont accept it expects collection and index
+        l1.addAll(Arrays.asList(890,1000,10,104,6,1,4,5,5,4,3));
+		System.out.println(l1);
+		Set s1=new HashSet<>();
+		s1.addAll(l1);
+		System.out.println(s1); //removed duplicates
+
+	}
+}
+
+output :
+[890, 1000, 10, 104, 6, 1, 4, 5, 5, 4, 3]
+[1, 3, 4, 5, 6, 1000, 104, 890, 10]
+
+
+using TreeSet we can sort as it uses naturally ordering --sortedSet Interface as its uses compartor inside .TreeSet uses a natural ordering (via compareTo())
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		List l1=new ArrayList<>();
+// 		l1.addAll(1,2,3,4,5); //wrong wont accept it expects collection and index
+        l1.addAll(Arrays.asList(890,1000,10,104,6,1,4,5,5,4,3));
+		System.out.println(l1);
+		Set s1=new TreeSet<>();
+		s1.addAll(l1);
+		System.out.println(s1); //removed duplicates
+
+	}
+}    
+output
+[890, 1000, 10, 104, 6, 1, 4, 5, 5, 4, 3]
+[1, 3, 4, 5, 6, 10, 104, 890, 1000]
+
+----------------------------------------------------
+mixed object
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		List l1=new ArrayList<>();
+// 		l1.addAll(1,2,3,4,5); //wrong wont accept it expects collection and index
+        l1.addAll(Arrays.asList(890,1000,10,104,"hello",1,4,5,5,4,3));
+		System.out.println(l1);
+		Set s1=new TreeSet<>();
+		s1.addAll(l1);
+		System.out.println(s1); //removed duplicates
+
+	}
+}
+
+TreeSet will throw class cast exception as uses CompareTo() for natural sorting.
+option 1: use HashSet()  removes duplicates, but unordered
+option 2: use  LinkedHashSet<>();  removes duplicates and preserves insertion order
+Option 3:use treeset with all integers or string
+
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		List l1=new ArrayList<>();
+// 		l1.addAll(1,2,3,4,5); //wrong wont accept it expects collection and index
+        l1.addAll(Arrays.asList(890,1000,10,104,"hello",1,4,5,5,4,3));
+		System.out.println(l1);
+		Set s1=new LinkedHashSet<>();
+		s1.addAll(l1);
+		System.out.println(s1); //removed duplicates
+
+	}
+}
+output:
+[890, 1000, 10, 104, hello, 1, 4, 5, 5, 4, 3]
+[890, 1000, 10, 104, hello, 1, 4, 5, 3]
+
+if we use linkedHashSet it follows order of input we given not sorted.
+-----------------------------------------------------------------------------------
+if we want to sort a object somewhat tricky need to understand 
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        List<Object> mixed = Arrays.asList(890, "hello", 1000, 10, "apple", 104, 1, "banana");
+
+        // Custom sort: Integers first, then Strings, each sorted naturally
+        mixed.sort((a, b) -> {
+            if (a instanceof Integer && b instanceof String) return -1;
+            if (a instanceof String && b instanceof Integer) return 1;
+            return a.toString().compareTo(b.toString()); // Compare within type
+        });
+
+        // Optional: Remove duplicates using LinkedHashSet to preserve order
+        Set<Object> sortedUnique = new LinkedHashSet<>(mixed);
+
+        System.out.println(sortedUnique);
+    }
+}
+
+
+but this below is somewhat understandable 
+
+sorted object
+
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		List l1=new ArrayList<>();
+        l1.addAll(Arrays.asList(890,1000,10,104,"hello",1,4,5,5,4,3,"world"));
+		System.out.println(l1);
+		Set<Integer> s1=new TreeSet<Integer>();
+		Set<String> s2=new TreeSet<String>();
+		for(Object obj: l1){
+		    if(obj instanceof Integer){
+		        s1.add((Integer)obj); //casting imp bcoz converting object to Integer or STring
+		    }else if(obj instanceof String){
+		        s2.add((String)obj);
+		    }
+		}
+		
+		List result=new ArrayList<>();
+		result.addAll(s1);
+		result.addAll(s2);
+		System.out.println("final "+result);
+	}
+}
+
+output:
+
+[890, 1000, 10, 104, hello, 1, 4, 5, 5, 4, 3, world]
+final [1, 3, 4, 5, 10, 104, 890, 1000, hello, world]
+
+
