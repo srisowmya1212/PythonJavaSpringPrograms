@@ -106,6 +106,18 @@ class Codechef
 
 	}
 }
+-------------------------------------------------------------------------
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		
+		List<Integer> list=Arrays.asList(1,2,3,4,1,2,2,3,3,3);
+		Set<Integer> set=new HashSet<>(list);
+		System.out.println(set);
 
+	}
+}   //output [1,2,3,4]
 
 
