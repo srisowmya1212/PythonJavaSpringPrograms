@@ -141,6 +141,41 @@ public class Main {
         System.out.println(set);
     }
 }
+--------------------------------------------------------------------------------------------
+remove duplicates and prime
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{ 
+        List<Integer> list=Arrays.asList(1,2,1,2,3,4,5,5);
+        Set<Integer> set=new HashSet<>(list);
+        System.out.println(set);
+        for(int num :set){
+            if(isPrime(num)){
+                System.out.println(num);
+            }
+        }
+        
+        
+    }
+    
+    public static boolean isPrime(int num){
+            int count=0;
+            for(int i=1;i<=num;i++){
+                if(num%i==0){
+                    count++;
+                }
+                 
+            }
+            return count==2; //2 because prime numbr divide by 1 and itself i.e; 2 times count  ex: 3 divide by 1 and 3 ,so count will count 2
+           
+    }
+}
 
 
 
