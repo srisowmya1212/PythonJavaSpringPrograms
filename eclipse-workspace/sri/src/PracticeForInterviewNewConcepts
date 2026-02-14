@@ -178,4 +178,32 @@ output:
 [890, 1000, 10, 104, hello, 1, 4, 5, 5, 4, 3, world]
 final [1, 3, 4, 5, 10, 104, 890, 1000, hello, world]
 
+------------------------------------------------------------------------------------------------------------
+duplicates find in the llist
 
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		List<Integer> list=Arrays.asList(1,2,3,4,1,2,2,3,3,3,5);
+		Set<Integer> set=new HashSet<>();
+		//To find the duplicates
+		Set<Integer> duplicate=new HashSet<>();
+		for(int num:list){
+		    if(!set.add(num)){
+		        duplicate.add(num);
+		        
+		    }
+		}
+		System.out.println("Duplicates "+duplicate);
+		System.out.println("Set "+set);
+
+	}
+}
+
+Duplicates [1, 2, 3]
+Set [1, 2, 3, 4, 5]
