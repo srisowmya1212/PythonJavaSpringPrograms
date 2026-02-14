@@ -107,6 +107,9 @@ class Codechef
 	}
 }
 -------------------------------------------------------------------------
+
+using list converted to set to remove duplicates
+
 class Codechef
 {
 	public static void main (String[] args) throws java.lang.Exception
@@ -119,5 +122,25 @@ class Codechef
 
 	}
 }   //output [1,2,3,4]
+
+//like above we should not be sent, if u use array use for loop
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+
+        int[] arr = {1,2,1,2,3,4,5,5};
+
+        Set<Integer> set = new HashSet<>();
+
+        for (int num : arr) {
+            set.add(num);
+        }
+
+        System.out.println(set);
+    }
+}
+
 
 
