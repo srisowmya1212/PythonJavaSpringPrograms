@@ -233,3 +233,30 @@ class Codechef
 }
 
 O/P  Given is palindrone
+
+--------------------------------------------------------------
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+import java.util.stream.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+	  
+	  //We have two lists remove duplicates and store as one list
+	  List<Integer> l1=Arrays.asList(1,2,1,2,3,4);
+	  List<Integer> l2=Arrays.asList(5,5,6,1,8);
+	  List<Integer> l3=new ArrayList<>();
+	  l3.addAll(l1);
+	  l3.addAll(l2);
+	  System.out.println("Concated list "+l3);
+	  List<Integer> output=l3.stream().distinct().toList();
+	  System.out.println("Removed duplicates"+output);
+	}
+}
+
+Concated list [1, 2, 1, 2, 3, 4, 5, 5, 6, 1, 8]
+Removed duplicates[1, 2, 3, 4, 5, 6, 8]
