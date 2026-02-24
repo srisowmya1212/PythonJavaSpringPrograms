@@ -247,7 +247,7 @@ class Codechef
 	{
 	  
 	  //We have two lists remove duplicates and store as one list
-	  List<Integer> l1=Arrays.asList(1,2,1,2,3,4);
+	  List<Integer> l1=Arrays.asList(1,2,1,11,2,3,4);
 	  List<Integer> l2=Arrays.asList(5,5,6,1,8);
 	  List<Integer> l3=new ArrayList<>();
 	  l3.addAll(l1);
@@ -258,5 +258,53 @@ class Codechef
 	}
 }
 
-Concated list [1, 2, 1, 2, 3, 4, 5, 5, 6, 1, 8]
-Removed duplicates[1, 2, 3, 4, 5, 6, 8]
+Concated list [1, 2, 1, 11, 2, 3, 4, 5, 5, 6, 1, 8]
+Removed duplicates[1, 2, 11, 3, 4, 5, 6, 8]
+
+---------------------------------------------------
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+import java.util.stream.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+	  
+	  //We have two lists remove duplicates and store as one list
+	  List<Integer> l1=Arrays.asList(1,2,1,11,2,3,4);
+	  List<Integer> l2=Arrays.asList(5,5,6,1,8);
+	  List<Integer> l3=new ArrayList<>();
+	  l3.addAll(l1);
+	  l3.addAll(l2);
+	  System.out.println("Concated list "+l3);
+	  List<Integer> output=l3.stream().distinct().toList();
+	  System.out.println("Removed duplicates"+output);
+	  
+	  //find 2nd highest element
+	  
+	  //Set<Integer> setOutput=l3.stream().distinct().toSet(); //this not working in online compiler
+	  
+	  Set<Integer> setOutput=l3.stream().distinct().collect(Collectors.toSet());
+	  System.out.println(setOutput);
+	  List<Integer> l4=new ArrayList<>(setOutput);
+	  
+
+	  System.out.println("Second highest element   " +l4.get(l4.size() -2));
+	    
+	    // OR USE STREAMS
+	    
+	  Integer number=output.stream().sorted(Comparator.reverseOrder()).skip(1).findFirst().orElse(null);//retrun optionla findfirst use orElse()
+	  System.out.println(number);
+	  
+	  
+	}
+}
+
+Concated list [1, 2, 1, 11, 2, 3, 4, 5, 5, 6, 1, 8]
+Removed duplicates[1, 2, 11, 3, 4, 5, 6, 8]
+[1, 2, 3, 4, 5, 6, 8, 11]
+Second highest element   8
+8
