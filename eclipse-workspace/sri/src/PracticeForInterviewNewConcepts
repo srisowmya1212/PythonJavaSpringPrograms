@@ -354,6 +354,8 @@ class Codechef
 	{
 
 	  List<String> list2= List.of("a","z","r","e");
+	  list2=list2.stream().sorted().toList();
+	  System.out.println(list2);
 	 // Collections.sort(list2);
 	  //List.of() creates an immutable list (read-only).
  //Collections.sort() tries to modify the list → so Java throws: "UnsupportedOperationException" so above not exceuted
@@ -361,21 +363,25 @@ class Codechef
      List<String> list4= new ArrayList<>(List.of("a","z","r","e")); //Now it works because ArrayList is mutable.creates a modifiable copy Collections.sort() needs a modifiable list
       Collections.sort(list4);
 	  System.out.println("Sorted using collections "+list4);
-	  List<String> list3= new ArrayList<>(List.of("a","z","r","e"));
-	  String temp;
-	  for(int i=0;i<list3.size()-1;i++){
-	      //if(list2.get(i) > list2.get(i+1)) //You cannot use > to compare Strings in Java only integers
-	      if(list3.get(i).compareTo(list3.get(i+1)) >0)
-	      {
-	          temp=list3.get(i);
-	          list3.set(i, list3.get(i+1));
-              list3.set(i+1, temp);//list2.get(i) is a value, not a variable.You cannot assign to it. use set
-	      }
-	  }
-	  System.out.println(list3);
+	  List<String> list3 = new ArrayList<>(List.of("a","z","r","e","b"));
+     String temp;
+
+    for (int i = 0; i < list3.size() - 1; i++) {
+       for (int j = 0; j < list3.size() - 1 - i; j++) {
+          if (list3.get(j).compareTo(list3.get(j + 1)) > 0) {
+             temp = list3.get(j);
+             list3.set(j, list3.get(j + 1));
+             list3.set(j + 1, temp);
+        }
+    }
+}
+
+System.out.println("Used compareTo method: " + list3);
 
 	}
 }
 
+[a, e, r, z]
 Sorted using collections [a, e, r, z]
-[a, r, e, z]
+Used compareTo method: [a, b, e, r, z]
+
