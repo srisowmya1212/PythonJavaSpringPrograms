@@ -315,6 +315,10 @@ Second highest element   8
 -----------------------------------------------------------------------
 sort ascending and decending string values usig streams
 
+//Collections.sort(list) tries to change the same list, and List.of() makes an immutable (read-only) list, so it throws an error ❌
+
+//stream().sorted().toList() creates a new sorted list instead of changing the original one, so no error happens
+
 import java.util.*;
 import java.lang.*;
 import java.io.*;
