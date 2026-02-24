@@ -313,7 +313,7 @@ Removed duplicates[1, 2, 11, 3, 4, 5, 6, 8]
 Second highest element   8
 8
 -----------------------------------------------------------------------
-sort ascending and decending string values
+sort ascending and decending string values usig streams
 
 import java.util.*;
 import java.lang.*;
@@ -325,7 +325,7 @@ class Codechef
 	public static void main (String[] args) throws java.lang.Exception
 	{
 	  
-	  List<String> list= List.of("a","z","r","e");
+	  List<String> list= List.of("a","z","r","e"); //immutable
 	  list=list.stream().sorted(Comparator.reverseOrder()).toList();
 	  System.out.println(
 	      "descending order "+list);
@@ -339,3 +339,39 @@ class Codechef
 descending order [z, r, e, a]
 Ascending order [a, e, r, z]
 -------------------------------------------------
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+import java.util.stream.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+
+	  List<String> list2= List.of("a","z","r","e");
+	 // Collections.sort(list2);
+	  //List.of() creates an immutable list (read-only).
+ //Collections.sort() tries to modify the list → so Java throws: "UnsupportedOperationException" so above not exceuted
+ 
+     List<String> list4= new ArrayList<>(List.of("a","z","r","e")); //Now it works because ArrayList is mutable.creates a modifiable copy Collections.sort() needs a modifiable list
+      Collections.sort(list4);
+	  System.out.println("Sorted using collections "+list4);
+	  List<String> list3= new ArrayList<>(List.of("a","z","r","e"));
+	  String temp;
+	  for(int i=0;i<list3.size()-1;i++){
+	      //if(list2.get(i) > list2.get(i+1)) //You cannot use > to compare Strings in Java only integers
+	      if(list3.get(i).compareTo(list3.get(i+1)) >0)
+	      {
+	          temp=list3.get(i);
+	          list3.set(i, list3.get(i+1));
+              list3.set(i+1, temp);//list2.get(i) is a value, not a variable.You cannot assign to it. use set
+	      }
+	  }
+	  System.out.println(list3);
+
+	}
+}
+
+Sorted using collections [a, e, r, z]
+[a, r, e, z]
