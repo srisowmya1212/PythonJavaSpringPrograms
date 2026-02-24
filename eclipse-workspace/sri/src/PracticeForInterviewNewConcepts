@@ -389,3 +389,43 @@ System.out.println("Used compareTo method: " + list3);
 Sorted using collections [a, e, r, z]
 Used compareTo method: [a, b, e, r, z]
 
+--------------------------------------------------------------------------------------
+
+//sorted string and list<strng>
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+import java.util.stream.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+
+	 List<String> s=new ArrayList<>(List.of("Srisowmya","Hello","Apple"));
+	 Collections.sort(s); //this is only used of list when i have string and convert to toCharArray use Arrays.sort
+	 System.out.println("Sorted "+s);
+	 
+	 String a="Srisowmya";
+	 a=a.toLowerCase();
+	 char[] chars=a.toCharArray();
+	 Arrays.sort(chars);
+	 a=new String(chars);
+	 System.out.println(chars);
+	 System.out.println(a);
+	 
+	 String b="Srisowmya";
+	 b=b.toLowerCase();
+	 b = b.chars()
+             .sorted()
+             .mapToObj(c -> String.valueOf((char) c))
+             .collect(Collectors.joining());
+        
+     System.out.println(b);
+	 
+
+	}
+}
+
+
