@@ -299,12 +299,43 @@ class Codechef
 	  Integer number=output.stream().sorted(Comparator.reverseOrder()).skip(1).findFirst().orElse(null);//retrun optionla findfirst use orElse()
 	  System.out.println(number);
 	  
+	  List<Integer> sorted=output.stream().sorted(Comparator.reverseOrder()).toList();
+	  System.out.println("Sorted "+sorted);
+	  
 	  
 	}
 }
+
 
 Concated list [1, 2, 1, 11, 2, 3, 4, 5, 5, 6, 1, 8]
 Removed duplicates[1, 2, 11, 3, 4, 5, 6, 8]
 [1, 2, 3, 4, 5, 6, 8, 11]
 Second highest element   8
 8
+-----------------------------------------------------------------------
+sort ascending and decending string values
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+import java.util.stream.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+	  
+	  List<String> list= List.of("a","z","r","e");
+	  list=list.stream().sorted(Comparator.reverseOrder()).toList();
+	  System.out.println(
+	      "descending order "+list);
+	  List<String> list1=list.stream().sorted().toList();
+	  System.out.println("Ascending order "+list1);
+	  
+	  
+	}
+}
+
+descending order [z, r, e, a]
+Ascending order [a, e, r, z]
+-------------------------------------------------
