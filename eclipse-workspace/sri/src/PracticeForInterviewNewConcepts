@@ -376,6 +376,10 @@ class Codechef
     }
 }
 
+//compareTo() returns a number, and we check > 0 because:
+
+//👉 If it returns greater than 0, the first string comes after the second string alphabetically, so we swap them.
+
 System.out.println("Used compareTo method: " + list3);
 
 	}
