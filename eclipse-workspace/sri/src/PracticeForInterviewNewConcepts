@@ -207,3 +207,29 @@ class Codechef
 
 Duplicates [1, 2, 3]
 Set [1, 2, 3, 4, 5]
+
+------------------------------------
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+import java.util.stream.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+	  
+	  //palindrone or not string
+	   
+      String s="madam";
+      StringBuilder s1=new StringBuilder(s).reverse();
+      if(s.equals(s1.toString())){ //converted s1 stringbuilder object to string bcoz both are of different types not get issue but equals operator fails and go to else condition
+          System.out.println("Given is palindrone");
+      }else{
+          System.out.println("Not palindone");
+      }
+	}
+}
+
+O/P  Given is palindrone
