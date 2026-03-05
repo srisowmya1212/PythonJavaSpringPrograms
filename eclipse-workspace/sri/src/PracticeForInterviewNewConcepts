@@ -3,7 +3,22 @@ LinkedList → fast insertion/deletion
 HashSet → unique elements, fastest
 LinkedHashSet → unique + insertion order
 TreeSet → unique + sorted order
+MAP
+HashMap → fastest key-value
+LinkedHashMap → insertion order
+TreeMap → sorted keys
+QUEUE
+PriorityQueue → priority processing
+ArrayDeque → fast queue/stack
+BlockingQueue → multi-thread producer-consumer
 
+| Map                   | One-line Usage                                                                         |
+| --------------------- | -------------------------------------------------------------------------------------- |
+| **HashMap**           | Use when you need **fast key-value lookup and order does not matter**.                 |
+| **LinkedHashMap**     | Use when you need **key-value storage while maintaining insertion order**.             |
+| **TreeMap**           | Use when you need **key-value pairs automatically sorted by key**.                     |
+| **Hashtable**         | Use when you need **thread-safe key-value storage (legacy class)**.                    |
+| **ConcurrentHashMap** | Use when you need **high-performance thread-safe map in multi-threaded applications**. |
 
 
 
