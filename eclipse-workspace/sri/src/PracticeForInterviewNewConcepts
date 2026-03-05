@@ -1,3 +1,13 @@
+ArrayList → fast reading
+LinkedList → fast insertion/deletion
+HashSet → unique elements, fastest
+LinkedHashSet → unique + insertion order
+TreeSet → unique + sorted order
+
+
+
+
+
 Using Collections and methods learning
 
 import java.util.*;
