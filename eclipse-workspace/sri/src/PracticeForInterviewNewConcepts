@@ -6,7 +6,7 @@ TreeSet → unique + sorted order
 MAP
 HashMap → fastest key-value
 LinkedHashMap → insertion order
-TreeMap → sorted keys
+TreeMap → sorted keys,,,sorted by key, not value
 QUEUE
 PriorityQueue → priority processing
 ArrayDeque → fast queue/stack
