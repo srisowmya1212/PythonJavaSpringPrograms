@@ -166,6 +166,8 @@ public class Main {
 
 
 but this below is somewhat understandable 
+The instanceof operator in Java is a comparison operator used at runtime to check if an object is an instance of a specific class, subclass, or interface. 
+It evaluates to a boolean value: true if the object matches the type, and false otherwise.
 
 sorted object
 
